@@ -6,24 +6,16 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:12:21 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/13 15:50:43 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/14 20:59:24 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	result;
-
-	result = 0;
-	while (*s1 && *s2)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		if (*s1 != *s2)
-		{
-			result = 1 - 2 * (*s1 < *s2);
-			break ;
-		}
 		s1++;
 		s2++;
 	}
-	return (result);
+	return (*s1 - *s2);
 }
