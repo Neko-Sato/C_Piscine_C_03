@@ -6,19 +6,19 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:07:39 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/13 16:23:23 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/15 00:32:02 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	*_dest;
+	char *_dest;
 
 	_dest = dest;
 	while (*dest)
 		dest++;
 	while (*src && nb--)
 		*(dest++) = *(src++);
-	*dest = '0';	
+	*dest = '\0';
 	return (_dest);
 }
