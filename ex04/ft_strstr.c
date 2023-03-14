@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:07:59 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/14 23:46:22 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/15 03:15:38 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ char	*ft_strstr(char *str, char *to_find)
 			return (str);
 		str++;
 	}
+	return ((void *)0);
 }
