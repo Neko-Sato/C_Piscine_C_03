@@ -6,38 +6,34 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:07:59 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/13 17:55:31 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/14 23:46:22 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+unsigned long	ft_strlen(char *str)
 {
-	int	result;
+	unsigned long	i;
 
-	result = 0;
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-		{
-			result = 1 - 2 * (*s1 < *s2);
-			break ;
-		}
-		s1++;
-		s2++;
-	}
-	return (result);
+	i = 0;
+	while (*(str + i))
+		i++;
+	return (i);
 }
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	while ( sizeof str - sizeof to_find < 0)
-		if (!ft_strncmp(str, to_find))
-			return (str);
-		else
-			str++;
-}
+	char	*_str;
+	char	*_to_find;
 
-int	main(void)
-{
-	return (0);
+	_str = str;
+	_to_find = to_find;
+	while (*str)
+	{
+		to_find = _to_find;
+		while (*to_find && *(str + (to_find - _to_find)) == *to_find)
+			to_find++;
+		if (!*to_find)
+			return (str);
+		str++;
+	}
 }
