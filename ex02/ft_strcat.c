@@ -6,13 +6,13 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:07:39 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/14 18:59:27 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/15 06:49:17 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char *_dest;
+	char	*_dest;
 
 	_dest = dest;
 	while (*dest)

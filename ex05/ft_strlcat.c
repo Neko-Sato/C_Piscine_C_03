@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:07:39 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/15 00:08:39 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/15 06:49:46 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	while (1 < size-- && *src)
 		*(dest++) = *(src++);
 	*dest = '\0';
-	return ft_strlen(_dest);
+	return (ft_strlen(_dest));
 }
