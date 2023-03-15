@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2023/03/13 16:07:39 by hshimizu          #+#    #+#             */
 /*   Updated: 2023/03/15 12:59:22 by hshimizu         ###   ########.fr       */
+=======
+/*   Created: 2023/03/15 13:46:23 by hshimizu          #+#    #+#             */
+/*   Updated: 2023/03/15 14:41:35 by hshimizu         ###   ########.fr       */
+>>>>>>> 4a20a09ba1d0d56014bda8f4b377ec537f185016
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +27,7 @@ unsigned int	ft_strlen(char *str)
 
 unsigned int	*ft_strlcat(char *dest, char *src, unsigned int size)
 {
+<<<<<<< HEAD
 	char * _dest;
 
 	_dest = dest;
@@ -70,4 +76,20 @@ int    main(void)
     unsigned int result6 = strlcat(dest6, src6, z);
     printf("lib %s: %u\n", dest6, result6);
     return (0);
+=======
+	int flag;
+	unsigned int i;
+	unsigned int j;
+
+	i = 0;
+	while (*(dest + i++))
+		if (1 > size--)
+			flag = 1;
+	if (flag)
+		return (i);
+	j = i;
+	while (1 > size-- && *(src + i - j))
+		*(dest + i) = *(src + i - j);
+	return (i);
+>>>>>>> 4a20a09ba1d0d56014bda8f4b377ec537f185016
 }
