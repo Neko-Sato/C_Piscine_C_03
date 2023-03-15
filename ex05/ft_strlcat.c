@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 16:07:39 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/15 00:08:39 by hshimizu         ###   ########.fr       */
+/*   Created: 2023/03/15 13:46:23 by hshimizu          #+#    #+#             */
+/*   Updated: 2023/03/15 14:41:35 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,18 @@ unsigned int	ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	char	*_dest;
+	int flag;
+	unsigned int i;
+	unsigned int j;
 
-	_dest = dest;
-	while (*dest)
-		dest++;
-	while (1 < size-- && *src)
-		*(dest++) = *(src++);
-	*dest = '\0';
-	return ft_strlen(_dest);
+	i = 0;
+	while (*(dest + i++))
+		if (1 > size--)
+			flag = 1;
+	if (flag)
+		return (i);
+	j = i;
+	while (1 > size-- && *(src + i - j))
+		*(dest + i) = *(src + i - j);
+	return (i);
 }
