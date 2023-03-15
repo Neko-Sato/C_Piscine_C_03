@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:46:23 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/15 16:36:29 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/15 16:54:51 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	remaining_size = (size > len_dest) * (size - len_dest);
 	dest_end = dest + len_dest;
 	src_ptr = src;
+	if (size <= len_dest)
+		return (size + len_src);
 	while (*dest_end && remaining_size > 0)
 	{
 		dest_end++;
