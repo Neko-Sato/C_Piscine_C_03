@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:07:59 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/16 14:22:21 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/16 15:54:19 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,7 @@ char	*ft_strstr(char *str, char *to_find)
 			return (str);
 		if (!*str)
 			break ;
-		;
 		str++;
 	}
 	return ((void *)0);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char s1[] = "";                    /* 検索対象文字列 */
-	char s2[] = ""; /* 一致する場合 */ /* \0 */
-	char *sp;
-
-	puts("strstr:");
-	sp = strstr(s1, s2);
-	printf("%s\n", sp);
-
-	puts("ft_strstr:");
-	sp = ft_strstr(s1, s2);
-	printf("%s\n", sp);
 }
